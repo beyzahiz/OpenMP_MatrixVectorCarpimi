@@ -1,10 +1,16 @@
 #pragma omp parallel for schedule(dynamic,4)
 
-./openmp_multiplication 1
-./openmp_multiplication 2
-./openmp_multiplication 4
-./openmp_multiplication 8
-./openmp_multiplication 16
+clang++ -std=c++11 -Xpreprocessor -fopenmp \
+-I/opt/homebrew/opt/libomp/include \
+-L/opt/homebrew/opt/libomp/lib \
+-lomp openmp_multiplication.cpp -o openmp_multiplication
+
+./openmp_multiplication 3000 3000 1
+./openmp_multiplication 3000 3000 2
+./openmp_multiplication 3000 3000 4
+./openmp_multiplication 3000 3000 8
+./openmp_multiplication 3000 3000 16
+
 
 Thread Sayisi: 1
 Seri Zaman: 0.0309685 saniye
