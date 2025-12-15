@@ -9,16 +9,17 @@ using namespace chrono;
 
 int main(int argc, char* argv[]) {
 
-    if (argc < 2) {
-        cout << "Kullanim: openmp_multiplication.exe N\n";
-        return 1;
-    }
+    if (argc < 4) {
+    cout << "Kullanim: ./openmp_multiplication M K THREAD\n";
+    return 1;
+}
 
-    int N = atoi(argv[1]);
-    omp_set_num_threads(N);
+    int M = atoi(argv[1]);
+    int K = atoi(argv[2]);
+    int thread_count = atoi(argv[3]);
 
-    const int M = 3000;
-    const int K = 3000;
+    omp_set_num_threads(thread_count);
+
 
     vector<vector<int>> A(M, vector<int>(K));
     vector<int> x(K);
@@ -65,7 +66,9 @@ int main(int argc, char* argv[]) {
     double parallel_time = duration<double>(end_parallel - start_parallel).count();
 
     // ================== SONUCLAR ==================
-    cout << "Thread Sayisi: " << N << endl;
+    cout << "Matris Boyutu: " << M << " x " << K << endl;
+    cout << "Thread Sayisi: " << thread_count << endl;
+
     cout << "Seri Zaman: " << serial_time << " saniye\n";
     cout << "Paralel Zaman: " << parallel_time << " saniye\n";
     cout << "Speedup: " << serial_time / parallel_time << endl;
