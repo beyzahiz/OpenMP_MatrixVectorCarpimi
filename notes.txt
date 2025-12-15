@@ -1,0 +1,30 @@
+#pragma omp parallel for schedule(static)
+
+./openmp_multiplication 1
+./openmp_multiplication 2
+./openmp_multiplication 4
+./openmp_multiplication 8
+./openmp_multiplication 16
+
+Thread Sayisi: 1
+Seri Zaman: 0.0309498 saniye
+Paralel Zaman: 0.03491 saniye
+Speedup: 0.886558
+Thread Sayisi: 2
+Seri Zaman: 0.030934 saniye
+Paralel Zaman: 0.0186432 saniye
+Speedup: 1.65927
+Thread Sayisi: 4
+Seri Zaman: 0.0309349 saniye
+Paralel Zaman: 0.00960904 saniye
+Speedup: 3.21935
+Thread Sayisi: 8
+Seri Zaman: 0.0357794 saniye
+Paralel Zaman: 0.00909967 saniye
+Speedup: 3.93194
+Thread Sayisi: 16
+Seri Zaman: 0.0312413 saniye
+Paralel Zaman: 0.00746725 saniye
+Speedup: 4.18377
+
+
