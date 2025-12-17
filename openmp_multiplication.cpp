@@ -1,4 +1,4 @@
-// KÜTÜPHANELER
+//KÜTÜPHANELER
 #include <iostream>  //Ekrana yazı yazmak (cout) ve klavyeden veri almak için kullanılır.
 #include <vector>  //Dinamik diziler (vector) kullanabilmek için eklenir.
 #include <cstdlib>  //rand() ve atoi() gibi C standart fonksiyonlarını kullanmak için gerekir.
