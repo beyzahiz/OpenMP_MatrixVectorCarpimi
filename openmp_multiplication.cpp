@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {  //Programın başlangıç noktasıdır. argc
     //PARALEL HESAPLAMA
     auto start_parallel = high_resolution_clock::now();  //Paralel hesaplamanın başlangıç zamanını alır.
     
-    #pragma omp parallel for schedule(guided)  //Dış döngüyü OpenMP ile paralelleştirir. İş yükü thread’lere dinamik olarak dağıtılır.
+    #pragma omp parallel for  //Dış döngüyü OpenMP ile paralelleştirir. İş yükü thread’lere dinamik olarak dağıtılır.
 
     for (int i = 0; i < M; i++) {
         y_parallel[i] = 0;
