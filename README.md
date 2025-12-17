@@ -69,10 +69,10 @@ Derlenen programı çalıştırmak için aşağıdaki argümanları sırasıyla 
 
 ## Örnek Çıktı
 
-Matris Boyutu: 3000 x 3000
-Thread Sayisi: 8
-Seri Zaman: 0.0354913 saniye
-Paralel Zaman: 0.0090934 saniye
-Speedup: 3.9029
+Matris Boyutu: 3000 x 3000 <br>
+Thread Sayisi: 8 <br>
+Seri Zaman: 0.0354913 saniye <br>
+Paralel Zaman: 0.0090934 saniye <br>
+Speedup: 3.9029 <br>
 
 
